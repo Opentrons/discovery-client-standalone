@@ -1,0 +1,18 @@
+{
+  "name": "@opentrons/discovery-client-standalone",
+  "private": true,
+  "version": "3.6.5",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rimraf dist",
+    "predist": "yarn clean",
+    "dist": "pkg node_modules/@opentrons/discovery-client/bin/index.js --targets node12,linux,macos,win,x64 --output dist/discovery-client${target}"
+  },
+  "dependencies": {
+    "@opentrons/discovery-client": "3.6.5"
+  },
+  "devDependencies": {
+    "pkg": "^4.4.9",
+    "rimraf": "^3.0.2"
+  }
+}
